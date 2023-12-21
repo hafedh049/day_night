@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class DayNightSwitcher extends StatefulWidget {
   const DayNightSwitcher({super.key});
@@ -17,16 +18,16 @@ class _DayNightSwitcherState extends State<DayNightSwitcher> {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(_day ? "DAY" : "NIGHT", style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w500, letterSpacing: 2)),
+            Text(_day ? "DAY" : "NIGHT", style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w500, letterSpacing: 2)).animate().fade(),
             const SizedBox(height: 20),
             Switch(
               value: _day,
               activeColor: Colors.yellowAccent,
               activeThumbImage: const AssetImage("assets/day.jpg"),
-              activeTrackColor: Colors.transparent,
+              activeTrackColor: Colors.grey,
               inactiveThumbColor: Colors.blue,
               inactiveThumbImage: const AssetImage("assets/night.jpeg"),
-              inactiveTrackColor: Colors.transparent,
+              inactiveTrackColor: Colors.grey,
               onChanged: (bool value) => setState(() => _day = value),
             ),
           ],
