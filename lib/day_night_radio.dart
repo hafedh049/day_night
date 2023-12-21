@@ -19,11 +19,8 @@ class _DayNightSwitcherState extends State<DayNightSwitcher> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Animate(
-              effects: <Effect>[FadeEffect(duration: 500.ms)],
-              child: Text(
-                _day ? "DAY" : "NIGHT",
-                style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w500, letterSpacing: 2),
-              ),
+              effects: const <Effect>[FadeEffect(), ShakeEffect()],
+              child: Text(_day ? "DAY" : "NIGHT", style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w500, letterSpacing: 2)),
             ),
             const SizedBox(height: 20),
             Switch(
