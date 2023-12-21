@@ -21,6 +21,9 @@ class _DayNightSwitcherState extends State<DayNightSwitcher> {
             const SizedBox(height: 20),
             Switch(
               value: _day,
+              activeColor: Colors.yellowAccent,
+              activeThumbImage: const AssetImage("assets/day.png"),
+              activeTrackColor: Colors.grey,
               onChanged: (bool value) => setState(() => _day = value),
             ),
           ],
