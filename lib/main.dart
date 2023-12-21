@@ -1,17 +1,14 @@
+import 'package:day_night/day_night_radio.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(const Main());
 }
 
 class Main extends StatelessWidget {
   const Main({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.dark(),
-      home: ,
-    );
-  }
+  Widget build(BuildContext context) => MaterialApp(theme: ThemeData.dark(), home: const DayNightSwitcher());
 }
