@@ -33,6 +33,7 @@ class _DayNightSwitcherState extends State<DayNightSwitcher> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
                   border: Border.all(),
+                  image: DecorationImage(image: AssetImage("assets/${_day ? 'day.jpg' : 'night.jpeg'}"), fit: BoxFit.cover),
                 ),
               ),
             ),
