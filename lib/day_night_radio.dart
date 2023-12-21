@@ -19,19 +19,16 @@ class _DayNightSwitcherState extends State<DayNightSwitcher> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Animate(
-              effects: const <Effect>[FadeEffect(), ShakeEffect()],
+              key: ValueKey<bool>(_day),
+              effects: <Effect>[FadeEffect(duration: 500.ms), ShakeEffect(duration: 500.ms)],
               child: Text(_day ? "DAY" : "NIGHT", style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w500, letterSpacing: 2)),
             ),
             const SizedBox(height: 20),
-            Switch(
-              value: _day,
-              activeColor: Colors.yellowAccent,
-              activeThumbImage: const AssetImage("assets/day.jpg"),
-              activeTrackColor: Colors.grey,
-              inactiveThumbColor: Colors.blue,
-              inactiveThumbImage: const AssetImage("assets/night.jpeg"),
-              inactiveTrackColor: Colors.grey,
-              onChanged: (bool value) => setState(() => _day = value),
+            GestureDetector(
+              onTap: () {},
+              child: AnimatedContainer(
+                duration: 500.ms,
+              ),
             ),
           ],
         ),
