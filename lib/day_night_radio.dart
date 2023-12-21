@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-class DayNightRadio extends StatefulWidget {
-  const DayNightRadio({super.key});
+class DayNightSwitcher extends StatefulWidget {
+  const DayNightSwitcher({super.key});
 
   @override
-  State<DayNightRadio> createState() => _DayNightRadioState();
+  State<DayNightSwitcher> createState() => _DayNightSwitcherState();
 }
 
-class _DayNightRadioState extends State<DayNightRadio> {
+class _DayNightSwitcherState extends State<DayNightSwitcher> {
+  bool _day = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +16,11 @@ class _DayNightRadioState extends State<DayNightRadio> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
+          children: <Widget>[
+            Text(_day ? "DAY" : "NIGHT", style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w500, letterSpacing: 2)),
+            const SizedBox(height: 20),
+            Switch(value: value, onChanged: ),
+          ],
         ),
       ),
     );
