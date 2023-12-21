@@ -25,9 +25,15 @@ class _DayNightSwitcherState extends State<DayNightSwitcher> {
             ),
             const SizedBox(height: 20),
             GestureDetector(
-              onTap: () {},
+              onTap: () => setState(() => _day = !_day),
               child: AnimatedContainer(
                 duration: 500.ms,
+                width: 200,
+                height: 40,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  border: Border.all(),
+                ),
               ),
             ),
           ],
