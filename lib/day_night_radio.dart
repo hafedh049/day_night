@@ -19,7 +19,10 @@ class _DayNightSwitcherState extends State<DayNightSwitcher> {
           children: <Widget>[
             Text(_day ? "DAY" : "NIGHT", style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w500, letterSpacing: 2)),
             const SizedBox(height: 20),
-            Switch(value: _day, onChanged: (bool value) => ,),
+            Switch(
+              value: _day,
+              onChanged: (bool value) => setState(() => _day = value),
+            ),
           ],
         ),
       ),
